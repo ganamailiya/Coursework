@@ -25,9 +25,12 @@ if(isset($_POST["submit"])) {
         or die(mysqli_error($db));
         if($query)
         {
-            $msg = "Thank You! you are now registered.";
+            $msg = "Thank You!";
             echo $msg;
         }
+    else {
+        echo "Unsuccessful";
+    }
 
 
 }
