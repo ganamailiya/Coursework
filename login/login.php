@@ -26,10 +26,9 @@
 			//Check username and password from database
 			$sql="SELECT * FROM users WHERE email='$usermail' and password='$password'";
 			$result=mysqli_query($db,$sql);
-			echo "sh";
 			$row=mysqli_fetch_array($result) ;
 			echo $row['password'];
-			echo "you again 3";
+			echo "you again 3" . "<br>";
 			
 			//If username and password exist in our database then create a session.
 			//Otherwise echo error.
@@ -41,8 +40,7 @@
 
 
 			}
-			else
-			{
+			else {
 				$error = "Incorrect username or password.";
 				echo $error;
 			}
