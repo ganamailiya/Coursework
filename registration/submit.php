@@ -1,4 +1,5 @@
 <?php
+include ("connection.php");
 $msg = "";
 if(isset($_POST["submit"]))
 {
@@ -24,7 +25,8 @@ if(isset($_POST["submit"]))
     else
     {
         //echo $name." ".$email." ".$password;
-        $query = mysqli_query($db, "INSERT INTO users (username, email, password, phone)VALUES ('$name', '$email', '$password', '$mobile')")or die(mysqli_error($db));
+        $query = mysqli_query($db, "INSERT INTO users (username, email, password, phone)VALUES ('$name', '$email', '$password', '$mobile')")
+        or die(mysqli_error($db));
         if($query)
         {
             $msg = "Thank You! you are now registered.";
