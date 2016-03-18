@@ -27,7 +27,7 @@
 			$sql="SELECT userID FROM users WHERE email='$usermail' and password='$password'";
 			$result=mysqli_query($db,$sql);
 			echo "sh";
-			$row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
+			$row=mysqli_fetch_array($result) ;
 			echo $row['password'];
 			echo "you again 3";
 			
