@@ -10,15 +10,12 @@ $msg = "";
 
 if(isset($_POST["submit"])) {
 
-    $name = $_POST["name"];
     $bugtitle = $_POST["bugtitle"];
     $bugdesc = $_POST["bugdesc"];
-    $mobile = $_POST["mobile"];
-    $name = mysqli_real_escape_string($db, $name);
-    $email = mysqli_real_escape_string($db, $email);
-    $password = mysqli_real_escape_string($db, $password);
-    $password = md5($password);
-    $mobile = mysqli_real_escape_string($db, $mobile);
+    $attach = $_POST["attach"];
+    $bugtitle = mysqli_real_escape_string($db, $bugtitle);
+    $bugdesc = mysqli_real_escape_string($db, $bugdesc);
+
 
 
     $sql="SELECT email FROM users WHERE email='$email'";
@@ -31,7 +28,7 @@ if(isset($_POST["submit"])) {
     else
     {
         //echo $name." ".$email." ".$password;
-        $query = mysqli_query($db, "INSERT INTO users (username, email, password, phone)VALUES ('$name', '$email', '$password', '$mobile')")
+        $query = mysqli_query($db, "INSERT INTO bugs (title, desc) VALUES ('$bugtitle', '$bugdesc')")
         or die(mysqli_error($db));
         if($query)
         {

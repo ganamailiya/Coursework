@@ -29,7 +29,6 @@
                 <td>Bug Tiltle</td>
                 <td>
                     <input type="text" maxlength="10" name="bugtitle">
-                    (10 digit number)
                 </td>
             </tr>
             <tr>
@@ -46,7 +45,7 @@
             <tr>
                 <td>Attachments</td>
                 <td>
-                    <input type="text" maxlength="30" name="attachment">
+                    <input type="text" maxlength="30" name="attach">
                 </td>
             </tr>
             <tr>
