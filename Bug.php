@@ -14,12 +14,14 @@ if(isset($_POST["submit"])) {
     $bugdesc = $_POST["bugdesc"];
     $attach = $_POST["attach"];
     $users = $_SESSION['usermail'];
+    echo "jj";
 
     $bugtitle = mysqli_real_escape_string($db, $bugtitle);
     $bugdesc = mysqli_real_escape_string($db, $bugdesc);
 
     $sql= mysqli_fetch_array(mysqli_query($db, "select * from users where email= '$users'"));
     $id=$sql['userID'];
+    echo "jk";
 
         $query = mysqli_query($db, "INSERT INTO bugs (title, desc, fixDate, userID) VALUES ('$bugtitle', '$bugdesc', 'now', '$id')")
         or die(mysqli_error($db));
