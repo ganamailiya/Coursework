@@ -23,16 +23,18 @@
 			//Check username and password from database
 			$sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
 			$result=mysqli_query($db,$sql);
-			echo "you again";
 			$row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
+
+			echo "you again 1";
 			
 			//If username and password exist in our database then create a session.
 			//Otherwise echo error.
 			
-			if(mysqli_num_rows($result) == 1)
-			{
+			if(mysqli_num_rows($result) == 1) {
 				$_SESSION['usermail'] = $username; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
+
+				echo "you again 4";
 			}else
 			{
 				$error = "Incorrect username or password.";
