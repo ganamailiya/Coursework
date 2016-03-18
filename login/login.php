@@ -22,6 +22,7 @@
 			$password=$_POST['password'];
 			$password = md5($password);
 			echo $password ."<br>";
+			$_SESSION['usermail'] = $usermail; // Initializing Session
 			
 			//Check username and password from database
 			$sql="SELECT * FROM users WHERE email='$usermail' and password='$password'";
@@ -34,8 +35,6 @@
 			//Otherwise echo error.
 			
 			if(mysqli_num_rows($result) == 1) {
-				echo "me";
-				$_SESSION['usermail'] = $usermail; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
 
 
