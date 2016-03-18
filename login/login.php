@@ -33,7 +33,7 @@
 			//If username and password exist in our database then create a session.
 			//Otherwise echo error.
 			
-			if(mysqli_num_rows($row) == 1) {
+			if(mysqli_num_rows($result) == 1) {
 				echo "me";
 				$_SESSION['usermail'] = $usermail; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
