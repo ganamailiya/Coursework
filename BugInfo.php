@@ -153,7 +153,6 @@
                 <td>Attachments</td>
                 <td>
                     <input type="text" maxlength="30" name="State">
-                    (max 30 characters a-z and A-Z)
                 </td>
             </tr>
             <tr>
