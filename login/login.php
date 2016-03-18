@@ -41,6 +41,7 @@
 			else
 			{
 				$error = "Incorrect username or password.";
+				echo $error;
 			}
 
 		}
