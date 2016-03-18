@@ -35,7 +35,7 @@
 			//Otherwise echo error.
 			
 			if(mysqli_num_rows($result) == 1) {
-				header("location: home.php"); // Redirecting To Other Page
+				header("url = home.php"); // Redirecting To Other Page
 
 
 			}
