@@ -31,6 +31,7 @@
 			//Otherwise echo error.
 			
 			if(mysqli_num_rows($row) == 1) {
+				echo "me";
 				$_SESSION['usermail'] = $username; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
 
