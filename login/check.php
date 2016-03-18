@@ -1,7 +1,7 @@
 <?php
 include('connection.php');
 session_start();
-$user_check=$_SESSION['username'];
+$user_check=$_SESSION['usermail'];
 
 $ses_sql = mysqli_query($db,"SELECT username FROM users WHERE username='$user_check' ");
 
