@@ -5,13 +5,13 @@
 	$error = ""; //Variable for storing our errors.
 	if(isset($_POST["submit"]))
 	{
-		if(empty($_POST["username"]) || empty($_POST["password"]))
+		if(empty($_POST["usermail"]) || empty($_POST["password"]))
 		{
 			$error = "Both fields are required.";
 		}else
 		{
 			// Define $username and $password
-			$username=$_POST['username'];
+			$username=$_POST['usermail'];
 			$password=$_POST['password'];
 
 			// To protect from MySQL injection
@@ -31,7 +31,7 @@
 			
 			if(mysqli_num_rows($result) == 1)
 			{
-				$_SESSION['username'] = $username; // Initializing Session
+				$_SESSION['usermail'] = $username; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
 			}else
 			{
