@@ -28,6 +28,7 @@ if(isset($_POST["submit"]))
         if($query)
         {
             $msg = "Thank You! you are now registered.";
+            echo $msg;
         }
 
     }
