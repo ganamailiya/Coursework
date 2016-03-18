@@ -36,7 +36,7 @@
 				$_SESSION['usermail'] = $username; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
 
-				echo "you again 4";
+
 			}
 			else
 			{
