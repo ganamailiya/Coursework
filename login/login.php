@@ -13,7 +13,7 @@
 			// Define $username and $password
 			$username=$_POST['usermail'];
 			$password=$_POST['password'];
-
+			echo "you";
 			// To protect from MySQL injection
 			$username = stripslashes($username);
 			$password = stripslashes($password);
