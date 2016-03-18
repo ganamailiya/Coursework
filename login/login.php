@@ -12,7 +12,6 @@
 		{
 			// Define $username and $password
 			$usermail=$_POST['usermail'];
-			$password=$_POST['password'];
 			echo $usermail ."<br>";
 
 
@@ -20,6 +19,7 @@
 
 			$usermail = mysqli_real_escape_string($db, $usermail);
 			$password = mysqli_real_escape_string($db, $password);
+			$password=$_POST['password'];
 			$password = md5($password);
 			echo $password ."<br>";
 			
