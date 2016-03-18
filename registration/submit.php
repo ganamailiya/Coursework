@@ -1,12 +1,12 @@
 <?php
 include ("connection.php");
 $msg = "";
+echo "ty";
 if(isset($_POST["submit"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
     $Mobile = $_POST["mobile"];
-echo "ty";
     $name = mysqli_real_escape_string($db, $name);
     $email = mysqli_real_escape_string($db, $email);
     $password = mysqli_real_escape_string($db, $password);
