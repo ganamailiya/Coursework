@@ -12,6 +12,9 @@
 
 <body>
 <h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
+<div class="links">
+	<a href="../BugInfo.php">Upload Bugs</a> &nbsp;&nbsp;
+</div>
 <br><br><br>
 <a href="logout.php" style="font-size:18px">Logout?</a>
 </body>
