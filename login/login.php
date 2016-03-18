@@ -11,18 +11,18 @@
 		}else
 		{
 			// Define $username and $password
-			$username=$_POST['usermail'];
+			$usermail=$_POST['usermail'];
 			$password=$_POST['password'];
 
 			// To protect from MySQL injection
 
-			$username = mysqli_real_escape_string($db, $username);
+			$usermail = mysqli_real_escape_string($db, $usermail);
 			$password = mysqli_real_escape_string($db, $password);
 			$password = md5($password);
 			echo $password ."<br>";
 			
 			//Check username and password from database
-			$sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
+			$sql="SELECT userID FROM users WHERE email='$usermail' and password='$password'";
 			$result=mysqli_query($db,$sql);
 			echo "sh";
 			$row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
@@ -34,7 +34,7 @@
 			
 			if(mysqli_num_rows($row) == 1) {
 				echo "me";
-				$_SESSION['usermail'] = $username; // Initializing Session
+				$_SESSION['usermail'] = $usermail; // Initializing Session
 				header("location: home.php"); // Redirecting To Other Page
 
 
