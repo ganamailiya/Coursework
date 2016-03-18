@@ -23,7 +23,7 @@ include ("login/login.php")
 </div>
 <nav class = "format">
     <h3>Report Bug's</h3>
-    <form method="POST" action="form.php" enctype="multipart/form-data">
+    <form method="POST" action="Bug.php" enctype="multipart/form-data">
         <table cellpadding="10" align="center" id = "signup">
             <tbody>
             <tr>
