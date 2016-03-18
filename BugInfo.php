@@ -26,16 +26,9 @@
         <table cellpadding="10" align="center" id = "signup">
             <tbody>
             <tr>
-                <td>UserName</td>
-                <td>
-                    <input type="text" maxlength="30" name="Name">
-                    (max 30 characters a-z and A-Z)
-                </td>
-            </tr>
-            <tr>
                 <td>Bug Tiltle</td>
                 <td>
-                    <input type="text" maxlength="10" name="BugTitle">
+                    <input type="text" maxlength="10" name="bugtitle">
                     (10 digit number)
                 </td>
             </tr>
@@ -47,22 +40,13 @@
                     <br>
                 </td>
                 <td>
-                    <textarea cols="30" rows="4" name="BugInfo" style="width: 330px; height: 88px;"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>Fixed</td>
-                <td>
-                    Fixed
-                    <input type="radio" value="fixed" name="fixed">
-                    Unfixed
-                    <input type="radio" value="unfixed" name="fixed">
+                    <textarea cols="30" rows="4" name="bugdesc" style="width: 330px; height: 88px;"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Attachments</td>
                 <td>
-                    <input type="text" maxlength="30" name="State">
+                    <input type="text" maxlength="30" name="attachment">
                 </td>
             </tr>
             <tr>
