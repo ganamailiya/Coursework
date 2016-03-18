@@ -13,7 +13,6 @@
 			// Define $username and $password
 			$username=$_POST['usermail'];
 			$password=$_POST['password'];
-			echo "you";
 			// To protect from MySQL injection
 			$username = stripslashes($username);
 			$password = stripslashes($password);
@@ -24,6 +23,7 @@
 			//Check username and password from database
 			$sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
 			$result=mysqli_query($db,$sql);
+			echo "you again";
 			$row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
 			
 			//If username and password exist in our database then create a session.
