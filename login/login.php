@@ -23,6 +23,7 @@
 			//Check username and password from database
 			$sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
 			$result=mysqli_query($db,$sql);
+			echo "sh";
 			$row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
 
 			echo "you again 3";
