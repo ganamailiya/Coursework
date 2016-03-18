@@ -13,22 +13,15 @@ if(isset($_POST["submit"])) {
     $bugtitle = $_POST["bugtitle"];
     $bugdesc = $_POST["bugdesc"];
     $attach = $_POST["attach"];
+    $users = $_SESSION['usermail'];
+
     $bugtitle = mysqli_real_escape_string($db, $bugtitle);
     $bugdesc = mysqli_real_escape_string($db, $bugdesc);
 
+    $sql= mysqli_fetch_array(mysqli_query($db, "select * from users where email= '$users'"));
+    $id=$sql['userID'];
 
-
-    $sql="SELECT email FROM users WHERE email='$email'";
-    $result=mysqli_query($db,$sql);
-    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-    if(mysqli_num_rows($result) == 1)
-    {
-        $msg = "Sorry...This email already exists...";
-    }
-    else
-    {
-        //echo $name." ".$email." ".$password;
-        $query = mysqli_query($db, "INSERT INTO bugs (title, desc) VALUES ('$bugtitle', '$bugdesc')")
+        $query = mysqli_query($db, "INSERT INTO bugs (title, desc, fixDate, userID) VALUES ('$bugtitle', '$bugdesc', 'now', '$id')")
         or die(mysqli_error($db));
         if($query)
         {
@@ -36,7 +29,7 @@ if(isset($_POST["submit"])) {
             echo $msg;
         }
 
-    }
+
 }
 ?>
 
