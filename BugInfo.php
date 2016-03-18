@@ -26,50 +26,41 @@
         <table cellpadding="10" align="center" id = "signup">
             <tbody>
             <tr>
-                <td>FIRST NAME</td>
+                <td>UserName</td>
                 <td>
-                    <input type="text" maxlength="30" name="First_Name">
+                    <input type="text" maxlength="30" name="Name">
                     (max 30 characters a-z and A-Z)
                 </td>
             </tr>
             <tr>
-                <td>LAST NAME</td>
+                <td>User ID</td>
                 <td>
-                    <input type="text" maxlength="30" name="Last_Name">
+                    <input type="text" maxlength="30" name="UserID">
                     (max 30 characters a-z and A-Z)
                 </td>
             </tr>
             <tr>
-                <td>EMAIL ID</td>
+                <td>Bug ID</td>
                 <td>
-                    <input type="text" maxlength="100" name="Email_Id">
+                    <input type="text" maxlength="100" name="BugId">
                 </td>
             </tr>
             <tr>
-                <td>MOBILE NUMBER</td>
+                <td>Bug Tiltle</td>
                 <td>
-                    <input type="text" maxlength="10" name="Mobile_Number">
+                    <input type="text" maxlength="10" name="BugTitle">
                     (10 digit number)
                 </td>
             </tr>
             <tr>
-                <td>GENDER</td>
                 <td>
-                    Male
-                    <input type="radio" value="Male" name="Gender">
-                    Female
-                    <input type="radio" value="Female" name="Gender">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    ADDRESS
+                    Bug Information
                     <br>
                     <br>
                     <br>
                 </td>
                 <td>
-                    <textarea cols="30" rows="4" name="Bug Information" style="width: 330px; height: 88px;"></textarea>
+                    <textarea cols="30" rows="4" name="BugInfo" style="width: 330px; height: 88px;"></textarea>
                 </td>
             </tr>
             <tr>
@@ -80,7 +71,7 @@
                 </td>
             </tr>
             <tr>
-                <td>COUNTRY</td>
+                <td>Attachments</td>
                 <td>
                     <input type="text" maxlength="30" name="State">
                     (max 30 characters a-z and A-Z)
