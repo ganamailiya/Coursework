@@ -3,6 +3,8 @@ include ("connection.php");
 $msg = "";
 echo "ty";
 if(isset($_POST["submit"])) {
+
+    echo "ty1";
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
