@@ -12,7 +12,7 @@
 
 <body>
 <h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
-<div class="links">
+<div class="link">
 	<a href="../BugInfo.php">Upload Bugs</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
