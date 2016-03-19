@@ -47,7 +47,8 @@ include ("login/login.php")
             <tr>
                 <td>Attachments</td>
                 <td>
-                    <input type="text" maxlength="30" name="attach">
+                    <input type="file" name="attach">
+                    <input type="submit" value="upload">
                 </td>
             </tr>
             <tr>
