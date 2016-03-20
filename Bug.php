@@ -12,7 +12,7 @@ if(isset($_POST["submit"])) {
 
     $bugtitle = $_POST["bugtitle"];
     $bugdesc = $_POST["bugdesc"];
-    $attach = $_POST["attach"];
+    $file = $_POST["file"];
     $users = $_SESSION['usermail'];
     echo "jj";
 
@@ -23,7 +23,7 @@ if(isset($_POST["submit"])) {
     $id=$sql['userID'];
     echo "jk";
 
-        $query = mysqli_query($db, "INSERT INTO bugs (title, desc, fixDate, userID) VALUES ('$bugtitle', '$bugdesc', 'now', '$id')")
+        $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$bugtitle', '$bugdesc', now(), '$id')")
         or die(mysqli_error($db));
         if($query)
         {

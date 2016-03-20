@@ -18,9 +18,8 @@ include ("login/login.php")
 <body>
 <img class="img1" src="images/%20logo.png ">
 <div class="links">
-    <a href="index.html">Home Page</a> &nbsp;&nbsp;
-    <a href="login.html">Login</a> &nbsp;&nbsp;
-    <a href="signup.html">Signup</a>
+    <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
+    <a href="login/logout.php">Logout</a> &nbsp;&nbsp;
 </div>
 <nav class = "format">
     <h3>Report Bug's</h3>
@@ -47,8 +46,8 @@ include ("login/login.php")
             <tr>
                 <td>Attachments</td>
                 <td>
-                    <input type="file" name="attach">
-                    <input type="submit" value="upload">
+                    <input type="file" name="file">
+                    <input type="submit" value="Upload">
                 </td>
             </tr>
             <tr>
