@@ -19,11 +19,11 @@ if(isset($_POST["submit"])) {
     $bugtitle = mysqli_real_escape_string($db, $bugtitle);
     $bugdesc = mysqli_real_escape_string($db, $bugdesc);
 
-    $sql= mysqli_fetch_array(mysqli_query($db, "select * from users where email= '$users'"));
+    $sql= mysqli_fetch_array(mysqli_query($db, "select userID from users where email= '$users'"));
     $id=$sql['userID'];
     echo "jk";
 
-        $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$bugtitle', '$bugdesc', now(), '$id')")
+        $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate) VALUES ('$bugtitle', '$bugdesc', now())")
         or die(mysqli_error($db));
         if($query)
         {
