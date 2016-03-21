@@ -55,7 +55,7 @@ $usermail = $_SESSION['usermail'];
             -->
             <tr>
                 <td align="center" colspan="2">
-                    <input type="submit" value="Submit" name="submit">
+                    <input type="submit" value="Submit" name="edit">
                 </td>
             </tr>
             </tbody>

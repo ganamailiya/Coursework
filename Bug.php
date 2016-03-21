@@ -14,7 +14,7 @@ include ("connection.php");
 $msg = "";
 echo "work";
 
-if(isset($_POST["submit"])) {
+if(isset($_POST["edit"])) {
     echo "now";
 
     $bugtitle = $_POST["bugtitle"];
@@ -51,5 +51,5 @@ if(isset($_POST["submit"])) {
 
 
 }
-?>
+
 
