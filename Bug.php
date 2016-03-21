@@ -11,6 +11,7 @@ session_start();
 
 include ("connection.php");
 $msg = "";
+echo "work";
 
 if(isset($_POST["submit"])) {
 
