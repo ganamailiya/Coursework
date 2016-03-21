@@ -17,13 +17,14 @@ $username = $_SESSION['username'];
     <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<?php echo $_SESSION["username"] . "welcome"; ?>
+
 <img class="img1" src="images/%20logo.png ">
 <div class="links">
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
     <a href="login/logout.php">Logout</a> &nbsp;&nbsp;
 </div>
 <nav class = "format">
+    <h3><?php echo $_SESSION["username"] . "welcome"; ?></h3>
     <h3>Report Bug's</h3>
     <form method="POST" action="Bug.php" enctype="multipart/form-data">
         <table cellpadding="10" align="center" id = "signup">
