@@ -1,31 +1,31 @@
 <?php
 	session_start();
-    $usermail = $_POST["usermail"];
+    $username = $_POST["username"];
 
 	include("connection.php"); //Establishing connection with our database
 	
 	$error = ""; //Variable for storing our errors.
 	if(isset($_POST["submit"]))
 	{
-		if(empty($_POST["usermail"]) || empty($_POST["password"]))
+		if(empty($_POST["username"]) || empty($_POST["password"]))
 		{
 			$error = "Both fields are required.";
 		}else
 		{
 			// Define $username and $password
-			$usermail=$_POST['usermail'];
+			$username=$_POST['username'];
 
 
 			// To protect from MySQL injection
 
-			$usermail = mysqli_real_escape_string($db, $usermail);
+			$username = mysqli_real_escape_string($db, $username);
 			$password = mysqli_real_escape_string($db, $password);
 			$password=$_POST['password'];
 			$password = md5($password);
-			$_SESSION['usermail'] = $usermail; // Initializing Session
+			$_SESSION['username'] = $username; // Initializing Session
 			
 			//Check username and password from database
-			$sql="SELECT * FROM users WHERE email='$usermail' and password='$password'";
+			$sql="SELECT * FROM users WHERE email='$username' and password='$password'";
 			$result=mysqli_query($db,$sql);
 			$row=mysqli_fetch_array($result) ;
 			

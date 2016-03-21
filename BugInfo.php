@@ -6,7 +6,7 @@
  * Time: 3:57 PM
  */
 session_start();
-$usermail = $_SESSION['username'];
+$username = $_SESSION['username'];
 
 ?>
 <!DOCTYPE html>
