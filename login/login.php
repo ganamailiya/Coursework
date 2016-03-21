@@ -1,5 +1,7 @@
 <?php
 	session_start();
+    $usermail = $_POST["usermail"];
+
 	include("connection.php"); //Establishing connection with our database
 	
 	$error = ""; //Variable for storing our errors.

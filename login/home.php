@@ -1,4 +1,8 @@
 <?php
+session_start();
+$usermail= $_SESSION['usermail'];
+
+
 	include("check.php");
 ?>
 
@@ -11,7 +15,7 @@
 </head>
 
 <body>
-<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
+<h1 class="hello">Hello, <em><?php echo $_SESSION ["usermail"];?>!</em></h1>
 <div class="link">
 	<a href="../BugInfo.php">Upload Bugs</a> &nbsp;&nbsp;
 </div>

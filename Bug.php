@@ -19,18 +19,27 @@ if(isset($_POST["submit"])) {
     $bugtitle = mysqli_real_escape_string($db, $bugtitle);
     $bugdesc = mysqli_real_escape_string($db, $bugdesc);
 
-    $sql= mysqli_fetch_array(mysqli_query($db, "select userID from users where email= '$users'"));
-    $id=$sql['userID'];
-    echo "jk";
+    $sql = mysqli_query($db, "select * from users where username = '$users'") or die (mysqli_connect_error($db));
 
-        $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate) VALUES ('$bugtitle', '$bugdesc', now())")
+    while ($rows = mysqli_fetch_array($sql)) {
+        $uname = $rows['usermail'];
+        $id=$sql['userID'];
+    }
+
+    echo "Username = $uname";
+    echo "UID = $id";
+
+        $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$bugtitle', '$bugdesc', now(), '$id')")
         or die(mysqli_error($db));
+
         if($query)
         {
             $msg = "Thank You!";
             echo $msg;
         }
-    else {
+
+    else
+    {
         echo "Unsuccessful";
     }
 
