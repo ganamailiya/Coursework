@@ -5,7 +5,8 @@
  * Date: 18/03/2016
  * Time: 3:57 PM
  */
-include ("login/login.php")
+session_start();
+$usermail = $_SESSION['usermail'];
 
 ?>
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ include ("login/login.php")
     <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
+<?php echo $_SESSION["usermail"] . "welcome"; ?>
 <img class="img1" src="images/%20logo.png ">
 <div class="links">
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
