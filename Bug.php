@@ -11,7 +11,7 @@ if(isset($_POST["submit"])) {
     $BugDesc = $_POST["bugdescription"];
     $Attachment = $_POST["file"];
     $PresentUser = $_SESSION['username'] ;
-
+echo $PresentUser;
 
     $Bugtitle= mysqli_real_escape_string($db, $Bugtitle);
     $BugDesc = mysqli_real_escape_string($db, $BugDesc);
