@@ -13,11 +13,13 @@ include ("connection.php");
 $bugtitle = $_POST["bugtitle"];
 echo $bugtitle;
 
-
+if (isset($_POST["edit"])) {
+    echo "woo";
+}
 $msg = "";
 echo "work";
 
-if (isset($_POST["edit"])) {
+/* if (isset($_POST["edit"])) {
     echo "now";
 
     $bugtitle = $_POST["bugtitle"];
@@ -54,5 +56,5 @@ if (isset($_POST["edit"])) {
 
 
 }
-
+*/
 
