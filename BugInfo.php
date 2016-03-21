@@ -6,7 +6,7 @@
  * Time: 3:57 PM
  */
 session_start();
-$usermail = $_SESSION['usermail'];
+$usermail = $_SESSION['username'];
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ $usermail = $_SESSION['usermail'];
     <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<?php echo $_SESSION["usermail"] . "welcome"; ?>
+<?php echo $_SESSION["username"] . "welcome"; ?>
 <img class="img1" src="images/%20logo.png ">
 <div class="links">
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
