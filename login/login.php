@@ -25,7 +25,7 @@
 			$_SESSION['username'] = $username; // Initializing Session
 			
 			//Check username and password from database
-			$sql="SELECT * FROM users WHERE email='$username' and password='$password'";
+			$sql="SELECT * FROM users WHERE username ='$username' and password='$password'";
 			$result=mysqli_query($db,$sql);
 			$row=mysqli_fetch_array($result) ;
 			
