@@ -15,6 +15,7 @@ $msg = "";
 if(isset($_POST["submit"])) {
 
     $bugtitle = $_POST["bugtitle"];
+    echo $bugtitle;
     $bugdesc = $_POST["bugdesc"];
     $file = $_POST["file"];
     $users = $_SESSION['usermail'];
