@@ -5,6 +5,10 @@
  * Date: 18/03/2016
  * Time: 8:35 PM
  */
+
+session_start();
+
+
 include ("connection.php");
 $msg = "";
 
@@ -14,7 +18,6 @@ if(isset($_POST["submit"])) {
     $bugdesc = $_POST["bugdesc"];
     $file = $_POST["file"];
     $users = $_SESSION['usermail'];
-    echo "jj";
 
     $bugtitle = mysqli_real_escape_string($db, $bugtitle);
     $bugdesc = mysqli_real_escape_string($db, $bugdesc);
