@@ -7,7 +7,8 @@
  */
 
 session_start();
-
+$bugtitle = $_POST["bugtitle"];
+echo $bugtitle;
 
 include ("connection.php");
 $msg = "";
