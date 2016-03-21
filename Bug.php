@@ -7,14 +7,17 @@
  */
 
 session_start();
+
+include ("connection.php");
+
 $bugtitle = $_POST["bugtitle"];
 echo $bugtitle;
 
-include ("connection.php");
+
 $msg = "";
 echo "work";
 
-if(isset($_POST["edit"])) {
+if (isset($_POST["edit"])) {
     echo "now";
 
     $bugtitle = $_POST["bugtitle"];
