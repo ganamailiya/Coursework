@@ -14,6 +14,7 @@ $msg = "";
 echo "work";
 
 if(isset($_POST["submit"])) {
+    echo "now";
 
     $bugtitle = $_POST["bugtitle"];
     echo $bugtitle;
