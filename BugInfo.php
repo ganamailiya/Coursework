@@ -45,13 +45,14 @@ $usermail = $_SESSION['usermail'];
                     <textarea cols="30" rows="4" name="bugdesc" style="width: 330px; height: 88px;"></textarea>
                 </td>
             </tr>
-            <tr>
+           <!-- <tr>
                 <td>Attachments</td>
                 <td>
                     <input type="file" name="file">
                     <input type="submit" value="Upload">
                 </td>
             </tr>
+            -->
             <tr>
                 <td align="center" colspan="2">
                     <input type="submit" value="Submit">
