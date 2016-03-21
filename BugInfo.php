@@ -42,7 +42,7 @@ $usermail = $_SESSION['usermail'];
                     <br>
                 </td>
                 <td>
-                    <textarea cols="30" rows="4" name="bugdesc" style="width: 330px; height: 88px;"></textarea>
+                    <textarea cols="30" rows="4" name="bugdescription" style="width: 330px; height: 88px;"></textarea>
                 </td>
             </tr>
            <!-- <tr>
@@ -55,7 +55,7 @@ $usermail = $_SESSION['usermail'];
             -->
             <tr>
                 <td align="center" colspan="2">
-                    <input type="submit" value="Submit" name="edit">
+                    <input type="submit" value="Submit" name="submit">
                 </td>
             </tr>
             </tbody>

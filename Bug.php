@@ -1,60 +1,48 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: iliyaganama
- * Date: 18/03/2016
- * Time: 8:35 PM
- */
 
-session_start();
+SESSION_START();
+
 
 include ("connection.php");
-
-$bugtitle = $_POST["bugtitle"];
-echo $bugtitle;
-
-if (isset($_POST["edit"])) {
-    echo "woo";
-}
 $msg = "";
-echo "work";
+if(isset($_POST["submit"])) {
 
-/* if (isset($_POST["edit"])) {
-    echo "now";
+    $Bugtitle = $_POST["bugtitle"];
+    $BugDesc = $_POST["bugdescription"];
+    $Attachment = $_POST["file"];
+    $PresentUser = $_SESSION['username'] ;
 
-    $bugtitle = $_POST["bugtitle"];
-    echo $bugtitle;
-    $bugdesc = $_POST["bugdesc"];
-    $file = $_POST["file"];
-    $users = $_SESSION['usermail'];
 
-    $bugtitle = mysqli_real_escape_string($db, $bugtitle);
-    $bugdesc = mysqli_real_escape_string($db, $bugdesc);
+    $Bugtitle= mysqli_real_escape_string($db, $Bugtitle);
+    $BugDesc = mysqli_real_escape_string($db, $BugDesc);
+    $Attachment = mysqli_real_escape_string($db, $Attachment);
 
-    $sql = mysqli_query($db, "select * from users where email = '$users'") or die (mysqli_connect_error($db));
 
-    while ($rows = mysqli_fetch_array($sql)) {
-        $uname = $rows['username'];
-        $id=$sql['userID'];
+
+    $query2 = mysqli_query($db, "SELECT * FROM users WHERE username = '$PresentUser'") or die (mysqli_error($db));
+
+    while ($rows = mysqli_fetch_array($query2)) {
+        $xname = $rows['username'];
+        $xid = $rows['userID'];
+
+        echo "The username selected is = $xname<br>";
+        echo "The userID is = $xid<br>";
     }
 
-    echo "Username ". $uname;
-    echo "UID = $id";
 
-        $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$bugtitle', '$bugdesc', now(), '$id')")
-        or die(mysqli_error($db));
+    $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$Bugtitle', '$BugDesc', now(), '$xid')")
+    or die(mysqli_error($db));
 
-        if($query)
-        {
-            echo  "Thank You!";
-        }
 
+
+    if($query)
+    {
+        $msg = "Bug successfully submitted..";
+        echo "<br>$msg<br>";
+    }
     else
     {
-        echo "Unsuccessful";
+        echo "submission error";
     }
-
-
 }
-*/
-
+?>
