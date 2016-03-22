@@ -52,8 +52,8 @@ if ($query){
     $runsql = mysqli_fetch_array($sql1);
     $newbugid = $runsql ['bugID'];
     $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
-    $result = mysqli_query($query1);
-    if($result)
+    //$result = mysqli_query($query1);
+    if($query)
     {
         echo "<br/>Image Uploaded.";
     }
