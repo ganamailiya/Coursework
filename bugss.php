@@ -11,9 +11,10 @@
 <div id="content">
     <?php
     // est DB connect
-    include ("login/login.php");
+    include ("connection.php");
+    include ("buglist.php");
 
-    $sql = "select * from bugs WHERE bugID = ".$_GET["bugID"];
+    $sql = "select * from bugs WHERE bugID = ".$_GET["$bugsid"];
 
     $result = mysqli_query($db,$sql);
 
