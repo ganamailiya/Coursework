@@ -10,11 +10,10 @@ $username= $_SESSION['username'];
 	$r = mysqli_query($db, $sql);
 
 	while ($fetch = $r -> fetch_array()){
-		echo $fetch[0];
+		echo $bid = $fetch[0];
 	}
 ?>
 
-<!--
 <!doctype html>
 <html>
 <head>
@@ -24,12 +23,11 @@ $username= $_SESSION['username'];
 </head>
 
 <body>
-<h1 class="hello">Hello, <em><?php //echo $_SESSION ["username"];?>!</em></h1>
+<h1 class="hello">Hello, <em><?php echo $_SESSION ["username"];?>!</em></h1>
 <div class="link">
-	<a href="../BugInfo.php">Upload Bugs</a> &nbsp;&nbsp;
+	<a href="../BugInfo.php?bid=<?php $bid; ?>">Upload Bugs</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
 <a href="logout.php" style="font-size:18px">Logout?</a>
 </body>
 </html>
--->
