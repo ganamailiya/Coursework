@@ -5,6 +5,7 @@
  * Date: 18/03/2016
  * Time: 3:57 PM
  */
+include ("login/login.php");
 session_start();
 $username = $_SESSION['username'];
 $bugid = $_GET['bid'];
