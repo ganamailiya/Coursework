@@ -52,7 +52,9 @@ if ($query){
 
     while ($runsql = mysqli_fetch_array($sql1)){
         $newbugid = $runsql ['bugID'];
-        echo $newbugid;
+        $newbu = $runsql ['description'];
+
+        echo $newbu;
     };
 
     $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
