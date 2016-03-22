@@ -54,7 +54,7 @@ echo $PresentUser;
         $newbu = $runsql ['description'];
 
         echo $newbu;
-    };
+    }
 
     $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
     //$result = mysqli_query($query1);
