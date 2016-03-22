@@ -13,7 +13,7 @@
     // est DB connect
     include ("login/login.php");
 
-    $sql = "select * from bugs WHERE bugID = ".$_GET["userID"];
+    $sql = "select * from bugs WHERE bugID = ".$_GET["bugID"];
 
     $result = mysqli_query($db,$sql);
 
