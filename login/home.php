@@ -10,7 +10,7 @@ $username= $_SESSION['username'];
 	$r = mysqli_query($db, $sql);
 
 	while ($fetch = $r -> fetch_array()){
-		echo $bid = $fetch[0];
+		$bid = $fetch[0];
 	}
 ?>
 
@@ -25,7 +25,7 @@ $username= $_SESSION['username'];
 <body>
 <h1 class="hello">Hello, <em><?php echo $_SESSION ["username"];?>!</em></h1>
 <div class="link">
-	<a href="../BugInfo.php?bid=<?php $bid; ?>">Upload Bugs</a> &nbsp;&nbsp;
+	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Upload Bugs</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
 <a href="logout.php" style="font-size:18px">Logout?</a>
