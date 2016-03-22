@@ -49,9 +49,12 @@ echo $PresentUser;
     or die(mysqli_error($db));
 if ($query){
     $sql1 = mysqli_query($db, "select bugID from bugs where title = '$bugtitle'");
-    $runsql = mysqli_fetch_array($sql1);
-    $newbugid = $runsql ['bugID'];
-    echo $newbugid;
+
+    while ($runsql = mysqli_fetch_array($sql1)){
+        $newbugid = $runsql ['bugID'];
+        echo $newbugid;
+    };
+
     $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
     //$result = mysqli_query($query1);
     if(false===$query1) {
