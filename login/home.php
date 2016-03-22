@@ -9,8 +9,8 @@ $username= $_SESSION['username'];
     $sql = "SELECT MAX(bugID) FROM bugs";
 	$r = mysqli_query($db, $sql);
 
-	while ($fecth = $r -> fetch_array()){
-		echo $id = $fetch[0];
+	while ($fetch = $r -> fetch_array()){
+		echo $fetch["bugID"];
 	}
 ?>
 
