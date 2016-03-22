@@ -13,7 +13,7 @@ if(isset($_POST["submit"])) {
         echo "Please select an image.";
     }
     else {
-        echo 'work1';
+
         $file_name = $_FILES['image']['name'];
         $dir = $_FILES['image']['tmp_name'];
         $location = "uploads/";
@@ -22,7 +22,7 @@ if(isset($_POST["submit"])) {
         $content = addslashes($content);
         fclose($fp);
         move_uploaded_file($dir, $location.$file_name);
-
+        echo $file_name;
         $image= addslashes($_FILES['image']['tmp_name']);
         $image= file_get_contents($image);
         $image= base64_encode($image);
