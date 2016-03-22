@@ -10,7 +10,7 @@ $username= $_SESSION['username'];
 	$r = mysqli_query($db, $sql);
 
 	while ($fetch = $r -> fetch_array()){
-		echo $fetch["bugID"];
+		echo $fetch[0];
 	}
 ?>
 
