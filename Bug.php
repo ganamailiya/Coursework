@@ -5,15 +5,15 @@ SESSION_START();
 
 require_once ("login/login.php");
 $msg = "";
-echo "work";
+
 if(isset($_POST["submit"])) {
-echo "now";
+
     if (getimagesize($_FILES['image']['tmp_name'])== FALSE)
     {
         echo "Please select an image.";
     }
-    else
-    {
+    else {
+        echo 'work';
         $file_name = $_FILES['image']['name'];
         $dir = $_FILES['image']['tmp_name'];
         $location = "uploads/";
@@ -27,7 +27,7 @@ echo "now";
         $image= file_get_contents($image);
         $image= base64_encode($image);
         saveimages($image);
-    }
+        }
 
     $Bugtitle = $_POST["bugtitle"];
     $BugDesc = $_POST["bugdescription"];
