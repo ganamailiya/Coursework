@@ -53,6 +53,7 @@ $bugid = $_GET['bid'];
                 <td>Attachments</td>
                 <td>
                     <input type="file" name="image">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
                 </td>
             </tr>
             <tr>

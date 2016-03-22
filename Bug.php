@@ -51,7 +51,7 @@ if ($query){
     $sql1 = mysqli_query($db, "select * from bugs where title = '$bugtitle'");
     $runsql = mysqli_fetch_array($sql1);
     $newbugid = $runsql ['bugID'];
-    $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$image', '$xid', '$newbugid')");
+    $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
     $result = mysqli_query($query1);
     if($result)
     {
