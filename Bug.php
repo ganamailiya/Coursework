@@ -3,7 +3,7 @@
 SESSION_START();
 
 
-include ("connection.php");
+require_once ("connection.php");
 $msg = "";
 if(isset($_POST["submit"])) {
     if (getimagesize($_FILES['image']['tmp_name'])== FALSE)
@@ -43,6 +43,9 @@ echo $PresentUser;
     $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$Bugtitle', '$BugDesc', now(), '$xid')")
     or die(mysqli_error($db));
 
+    $queryDb = mysqli_query($db, "URL, userID, bugID) VALUES ('$image', '$xid', NULL)")
+    or die(mysqli_error($db));
+
 
 
     if($query)
@@ -57,14 +60,10 @@ echo $PresentUser;
 }
 
 
+/*
 function saveimages($image)
 {
-    define('DB_SERVER', 'eu-cdbr-azure-west-d.cloudapp.net');
-    define('DB_USERNAME', 'b147602f41b7c0');
-    define('DB_PASSWORD', '21349eb1');
-    define('DB_DATABASE', 'Ganama');
-    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-    $qry = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$image', '123', NULL)");
+    $qry = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$image', '$xid', NULL)");
     $result = mysqli_query($qry);
     if($result)
     {
@@ -75,4 +74,5 @@ function saveimages($image)
         echo "<br/>Image Not Uploaded.";
     }
 }
+*/
 ?>
