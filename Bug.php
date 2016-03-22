@@ -51,16 +51,12 @@ echo $PresentUser;
 
     while ($runsql = mysqli_fetch_array($sql1)){
         $newbugid = $runsql ['bugID'];
-        $newbu = $runsql ['description'];
-
-        echo $newbu;
     }
 
     $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
     //$result = mysqli_query($query1);
-    if(false===$query1) {
-        printf("error: %s\n", mysqli_error($db));
-        //echo "<br/>Image Uploaded.";
+    if($query1) {
+        echo "<br/>Image Uploaded.";
     }
     else
     {
