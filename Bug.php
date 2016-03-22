@@ -51,14 +51,7 @@ if ($query){
     $sql1 = mysqli_query($db, "select * from bugs where title = '$bugtitle'");
     $runsql = mysqli_fetch_array($sql1);
     $newbugid = $runsql ['bugID'];
-    if(false===$sql1) {
-        printf("error: %s\n", mysqli_error($db));
-        //echo "<br/>Image Uploaded.";
-    }
-    else
-    {
-        echo "<br/>something.";
-    }
+    echo $newbugid;
     echo
     "two<br>";
     echo $newbugid;
