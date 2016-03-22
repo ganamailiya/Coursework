@@ -11,14 +11,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>Bug List</title>
     <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <img class="img1" src="images/%20logo.png ">
     <div class="links">
-    <a href="index.html">Home Page</a> &nbsp;&nbsp;
+    <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
     <a href="login.html">Login</a> &nbsp;&nbsp;
     <a href="signup.html">Signup</a>
     </div>
