@@ -12,7 +12,7 @@
     <?php
     // est DB connect
     include ("connection.php");
-
+ echo $_GET["bugID"];
     $sql = "select * from bugs WHERE bugID = ".$_GET["bugID"];
 
     $result = mysqli_query($db,$sql);
