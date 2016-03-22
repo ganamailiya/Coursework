@@ -7,6 +7,7 @@
  */
 session_start();
 $username = $_SESSION['username'];
+$bugid = $_GET['bid'];
 
 ?>
 <!DOCTYPE html>
@@ -27,6 +28,7 @@ $username = $_SESSION['username'];
     <h3><?php echo $_SESSION["username"] . "welcome"; ?></h3>
     <h3>Report Bug's</h3>
     <form method="POST" action="Bug.php" enctype="multipart/form-data">
+        <input type="hidden" name="bug" value="<?php echo $bugid; ?>" >
         <table cellpadding="10" align="center" id = "signup">
             <tbody>
             <tr>
