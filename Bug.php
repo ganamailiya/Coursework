@@ -3,7 +3,7 @@
 SESSION_START();
 
 
-require_once ("login/login.php");
+include ("login/login.php");
 $msg = "";
 
 if(isset($_POST["submit"])) {
