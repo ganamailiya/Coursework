@@ -26,6 +26,7 @@ $username= $_SESSION['username'];
 <h1 class="hello">Hello, <em><?php echo $_SESSION ["username"];?>!</em></h1>
 <div class="link">
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Upload Bugs</a> &nbsp;&nbsp;
+	<a href="../buglist.php">Home Page</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
 <a href="logout.php" style="font-size:18px">Logout?</a>
