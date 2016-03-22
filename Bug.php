@@ -47,7 +47,7 @@ echo $PresentUser;
 
     $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$Bugtitle', '$BugDesc', now(), '$xid')")
     or die(mysqli_error($db));
-    $sql1 = mysqli_query($db, "select bugID from bugs where title = '$bugtitle'");
+    $sql1 = mysqli_query($db, "select bugID from bugs where title = '$Bugtitle'");
 
     while ($runsql = mysqli_fetch_array($sql1)){
         $newbugid = $runsql ['bugID'];
