@@ -47,7 +47,6 @@ echo $PresentUser;
 
     $query = mysqli_query($db, "INSERT INTO bugs (title, description, postDate, userID) VALUES ('$Bugtitle', '$BugDesc', now(), '$xid')")
     or die(mysqli_error($db));
-if ($query){
     $sql1 = mysqli_query($db, "select bugID from bugs where title = '$bugtitle'");
 
     while ($runsql = mysqli_fetch_array($sql1)){
@@ -67,7 +66,7 @@ if ($query){
     {
         echo "<br/>Image Not Uploaded.";
     }
-}
+
 
    // $queryDb = mysqli_query($db, "URL, userID, bugID) VALUES ('$image', '$xid', NULL)")
    // or die(mysqli_error($db));
