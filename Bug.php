@@ -5,8 +5,9 @@ SESSION_START();
 
 require_once ("login/login.php");
 $msg = "";
+echo "work";
 if(isset($_POST["submit"])) {
-
+echo "now";
     if (getimagesize($_FILES['image']['tmp_name'])== FALSE)
     {
         echo "Please select an image.";
@@ -67,8 +68,8 @@ if ($query){
     }
 }
 
-    $queryDb = mysqli_query($db, "URL, userID, bugID) VALUES ('$image', '$xid', NULL)")
-    or die(mysqli_error($db));
+   // $queryDb = mysqli_query($db, "URL, userID, bugID) VALUES ('$image', '$xid', NULL)")
+   // or die(mysqli_error($db));
 
 
 
@@ -83,20 +84,4 @@ if ($query){
     }
 }
 
-
-/*
-function saveimages($image)
-{
-    $qry = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$image', '$xid', NULL)");
-    $result = mysqli_query($qry);
-    if($result)
-    {
-        echo "<br/>Image Uploaded.";
-    }
-    else
-    {
-        echo "<br/>Image Not Uploaded.";
-    }
-}
-*/
 ?>
