@@ -24,7 +24,7 @@ $username= $_SESSION['username'];
 </head>
 
 <body>
-<h1 class="hello">Hello, <em><?php echo $_SESSION ["username"];?>!</em></h1>
+<h1 class="hello">Hello, <em><?php //echo $_SESSION ["username"];?>!</em></h1>
 <div class="link">
 	<a href="../BugInfo.php">Upload Bugs</a> &nbsp;&nbsp;
 </div>
