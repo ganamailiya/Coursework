@@ -28,7 +28,7 @@ $bugid = $_GET['bid'];
     <h3><?php echo $_SESSION["username"] . "welcome"; ?></h3>
     <h3>Report Bug's</h3>
     <form method="POST" action="Bug.php" enctype="multipart/form-data">
-        <input type="hidden" name="bug" value="<?php echo $bugid; ?>" >
+        <input type="hidden" name="bug" value="<?php echo $username; ?>" >
         <table cellpadding="10" align="center" id = "signup">
             <tbody>
             <tr>

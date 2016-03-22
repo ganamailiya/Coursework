@@ -22,7 +22,6 @@ if(isset($_POST["submit"])) {
         $content = addslashes($content);
         fclose($fp);
         move_uploaded_file($dir, $location.$file_name);
-        echo $file_name;
         $image= addslashes($_FILES['image']['tmp_name']);
         $image= file_get_contents($image);
         $image= base64_encode($image);
@@ -31,7 +30,7 @@ if(isset($_POST["submit"])) {
 
     $Bugtitle = $_POST["bugtitle"];
     $BugDesc = $_POST["bugdescription"];
-    $PresentUser = $_SESSION['username'] ;
+    $PresentUser = $_POST['bug'] ;
 echo $PresentUser;
 
     $Bugtitle= mysqli_real_escape_string($db, $Bugtitle);
