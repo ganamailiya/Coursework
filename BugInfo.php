@@ -49,7 +49,7 @@ $username = $_SESSION['username'];
             <tr>
                 <td>Attachments</td>
                 <td>
-                    <input type="file" name="file">
+                    <input type="file" name="image">
                 </td>
             </tr>
             <tr>

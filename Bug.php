@@ -6,16 +6,26 @@ SESSION_START();
 include ("connection.php");
 $msg = "";
 if(isset($_POST["submit"])) {
+    if (getimagesize($_FILES['image']['tmp_name'])== FALSE)
+    {
+        echo "Please select an image.";
+    }
+    else
+    {
+        $image= addslashes($_FILES['image']['tmp_name']);
+        $name= addslashes($_FILES['image']['name']);
+        $image= file_get_contents($image);
+        $image= base64_encode($image);
+        saveimages($image);
+    }
 
     $Bugtitle = $_POST["bugtitle"];
     $BugDesc = $_POST["bugdescription"];
-    $Attachment = $_POST["file"];
     $PresentUser = $_SESSION['username'] ;
 echo $PresentUser;
 
     $Bugtitle= mysqli_real_escape_string($db, $Bugtitle);
     $BugDesc = mysqli_real_escape_string($db, $BugDesc);
-    $Attachment = mysqli_real_escape_string($db, $Attachment);
 
 
 
@@ -43,6 +53,19 @@ echo $PresentUser;
     else
     {
         echo "submission error";
+    }
+}
+function saveimages($image)
+{
+    $qry = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$image', '$xid', NULL)");
+    $result = mysqli_query($qry);
+    if($result)
+    {
+        echo "<br/>Image Uploaded.";
+    }
+    else
+    {
+        echo "<br/>Image Not Uploaded.";
     }
 }
 ?>
