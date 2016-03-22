@@ -4,8 +4,17 @@ $username= $_SESSION['username'];
 
 
 	include("check.php");
+	include("connection.php");
+
+    $sql = "SELECT MAX(bugID) FROM bugs";
+	$r = mysqli_query($db, $sql);
+
+	while ($fecth = $r -> fetch_array()){
+		echo $fetch["bugID"];
+	}
 ?>
 
+<!--
 <!doctype html>
 <html>
 <head>
@@ -23,3 +32,4 @@ $username= $_SESSION['username'];
 <a href="logout.php" style="font-size:18px">Logout?</a>
 </body>
 </html>
+-->
