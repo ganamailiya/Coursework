@@ -12,9 +12,8 @@
     <?php
     // est DB connect
     include ("connection.php");
-    include ("buglist.php");
 
-    $sql = "select * from bugs WHERE bugID = ".$_GET["$bugsid"];
+    $sql = "select * from bugs WHERE bugID = ".$_GET["bugID"];
 
     $result = mysqli_query($db,$sql);
 

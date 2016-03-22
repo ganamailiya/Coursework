@@ -28,7 +28,7 @@
     <?php
     //Establish connection with DB
     include ("connection.php");
-    $bugsid = $_POST["bugID"];
+    $_POST["bugID"];
 
     //select all from bugs table
     $sql = "select * from bugs";
