@@ -13,7 +13,7 @@ if(isset($_POST["submit"])) {
         echo "Please select an image.";
     }
     else {
-        echo 'work';
+        echo 'work1';
         $file_name = $_FILES['image']['name'];
         $dir = $_FILES['image']['tmp_name'];
         $location = "uploads/";
