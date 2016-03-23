@@ -5,6 +5,8 @@
  * Date: 22/03/2016
  * Time: 9:32 PM
  */
+session_start();
+$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
