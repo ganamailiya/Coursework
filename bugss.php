@@ -65,3 +65,22 @@
 </footer>
 </body>
 </html>
+
+    <?php
+    include ("connection.php");
+    include ("buglist.php");
+
+    $comment = $_POST["comment"];
+    $username = $_SESSION['username'];
+    $submit = $_POST["submit"];
+
+    if ($submit){
+        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bugID')")
+        or die(mysqli_error($db));
+    }
+    else{
+        echo "Please add a comment";
+    }
+
+
+    ?>
