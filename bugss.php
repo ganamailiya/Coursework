@@ -1,15 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: iliyaganama
- * Date: 22/03/2016
- * Time: 9:33 PM
- */
-session_start();
-
-?>
 
     <?php
+    session_start();
     // est DB connect
     include ("connection.php");
 
