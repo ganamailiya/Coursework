@@ -29,10 +29,27 @@ if(isset($_POST["submit"])) {
         or die(mysqli_error($db));
         if($query)
         {
-            $msg = "Thank You! you are now registered.";
+            $msg = "Thank You! you are now registered. Kindly click on the Login link";
             echo $msg;
         }
 
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Found Bugs</title>
+    <link type="text/css" rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<img class="img1" src="../images/%20logo.png ">
+<div class="links">
+    <a href="../index.html">Home Page</a> &nbsp;&nbsp;
+    <a href="../login.html">Login</a> &nbsp;&nbsp;
+    <a href="../Signup.html">Signup</a>
+</div>
+
+</body>
+</html>
