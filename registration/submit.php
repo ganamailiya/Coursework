@@ -30,7 +30,6 @@ if(isset($_POST["submit"])) {
         if($query)
         {
             $msg = "Thank You! you are now registered. Kindly click on the Login link";
-            echo $msg;
         }
 
     }
@@ -50,6 +49,6 @@ if(isset($_POST["submit"])) {
     <a href="../login.html">Login</a> &nbsp;&nbsp;
     <a href="../Signup.html">Signup</a>
 </div>
-
+<? echo $msg; ?>
 </body>
 </html>
