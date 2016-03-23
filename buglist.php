@@ -43,7 +43,7 @@
         $bugID = $row['bugID'];
 
         //write link to page
-        echo '<a href="bugss.php?id="'.$bugID.'>'.$bugtitle.'</a></br>';
+        echo "<a href='bugss.php?id=".$bugID."'>".$bugtitle."</a></br>";
     }
     ?>
 </div>
