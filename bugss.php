@@ -20,7 +20,7 @@
     $submit = $_POST["submit"];
 
     if ($submit){
-        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bugID')")
+        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bugID')")
         or die(mysqli_error($db));
     }
     else{
