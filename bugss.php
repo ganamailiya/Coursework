@@ -13,6 +13,7 @@
     $bugtitle = $row['title'];
     $bugID = $row['bugID'];
     $bugdesc = $row['description'];
+    $userID = $row['userID'];
     ?>
 <?php
     $comment = $_POST["comment"];
@@ -20,7 +21,7 @@
     $submit = $_POST["submit"];
 
     if ($submit){
-        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bugID')")
+        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bugID')")
         or die(mysqli_error($db));
     }
     else{
