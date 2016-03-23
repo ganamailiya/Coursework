@@ -68,7 +68,6 @@
 
     <?php
     include ("connection.php");
-    include ("buglist.php");
 
     $comment = $_POST["comment"];
     $username = $_SESSION['username'];
