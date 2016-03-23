@@ -74,11 +74,3 @@ session_start();
 </footer>
 </body>
 </html>
-
-<?php
-include ("connection.php");
-include ("buglist.php");
-
-
-
-?>
