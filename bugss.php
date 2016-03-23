@@ -13,7 +13,8 @@
     $bugtitle = $row['title'];
     $bugID = $row['bugID'];
     $bugdesc = $row['description'];
-
+    ?>
+<?php
     $comment = $_POST["comment"];
     $username = $_SESSION['username'];
     $submit = $_POST["submit"];
