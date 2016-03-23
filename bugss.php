@@ -17,10 +17,11 @@
 
     $comment = $_POST["comment"];
     $username = $_SESSION['username'];
+    $bid = $_GET["id"];
     $submit = $_POST["submit"];
 
     if ($submit){
-        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bugID')")
+        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bid')")
         or die(mysqli_error($db));
     }
     else{
