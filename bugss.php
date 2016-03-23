@@ -20,8 +20,6 @@
     $bugID = $row['bugID'];
     $bugdesc = $row['description'];
 
-    echo "<h2>".$bugtitle."</h2>";
-    echo "<p>".$bugdesc."</p>";
 
     ?>
 <!DOCTYPE html>
@@ -56,6 +54,7 @@
                 </td>
                 <td>
                     <textarea cols="30" rows="4" name="bugdescription" style="width: 330px; height: 88px;"></textarea>
+                    <input type="submit" value="Add Comment" name="submit">
                 </td>
             </tr>
             </tbody>
@@ -65,6 +64,5 @@
 <footer>
     <p>(c) 2016 Ganama's Design</p>
 </footer>
-
 </body>
 </html>
