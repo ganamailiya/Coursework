@@ -24,3 +24,47 @@
     echo "<p>".$bugdesc."</p>";
 
     ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bug Comments</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<img class="img1" src="images/%20logo.png ">
+<div class="links">
+    <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
+    <a href="login/logout.php">Logout</a> &nbsp;&nbsp;
+</div>
+<nav class = "format">
+    <?php
+    echo "<h2>".$bugtitle."</h2>";
+    echo "<p>".$bugdesc."</p>";
+    ?>
+    <h3>Add Comment</h3>
+    <form method="POST" action="Bug.php" enctype="multipart/form-data">
+        <table cellpadding="10" align="center" id = "signup">
+            <tbody>
+            <tr>
+                <td>
+                    Comment
+                    <br>
+                    <br>
+                    <br>
+                </td>
+                <td>
+                    <textarea cols="30" rows="4" name="bugdescription" style="width: 330px; height: 88px;"></textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</nav>
+<footer>
+    <p>(c) 2016 Ganama's Design</p>
+</footer>
+
+</body>
+</html>
