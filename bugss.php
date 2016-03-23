@@ -7,8 +7,6 @@
  */
 ?>
 
-<body>
-<div id="content">
     <?php
     // est DB connect
     include ("connection.php");
@@ -26,5 +24,3 @@
     echo "<p>".$bugdesc."</p>";
 
     ?>
-</div>
-</body>
