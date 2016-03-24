@@ -1,7 +1,7 @@
 
 
 h3 {
-    color: SlateBlue;
+    color: #0099FF;
     font-family: Calibri;
     font-size: 22pt;
     font-style: normal;
@@ -33,7 +33,7 @@ a:hover {
 }
 
 #p1{
-    color: SlateBlue;
+    color: #0099FF;
     font-family: Calibri;
     font-size: 15pt;
     font-style: normal;
@@ -41,7 +41,7 @@ a:hover {
     text-align: center;
 }
 #signup {
-    background-color: SlateBlue;
+    background-color: #0099FF;
     border: 5px groove navy;
     border-collapse: collapse;
     color: white;
