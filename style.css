@@ -20,13 +20,10 @@ margin-left: 70%;
 
 }
 a:link {
-    color: red;
-    text-decoration: none;
-}
-a:visited {
     color: green;
     text-decoration: none;
 }
+
 a:hover {
     color: hotpink;
     text-decoration: none;
