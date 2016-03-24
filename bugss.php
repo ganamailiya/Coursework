@@ -20,15 +20,17 @@
     $bid = $_GET["id"];
     $submit = $_POST["submit"];
 
+    if(isset($_POST["submit"])) {
+
     if ($submit){
-        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bid')")
+        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bid')")
         or die(mysqli_error($db));
     }
     else{
         echo "Please add a comment";
     }
 
-
+    }
     ?>
 <!DOCTYPE html>
 <html lang="en">
