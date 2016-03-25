@@ -17,22 +17,6 @@
     echo $userID;
    // echo $bugID;
 
-    $comment = $_POST["comment"];
-    $username = $_SESSION['username'];
-    $bid = $bugID;
-
-echo $comment;
-    echo $username;
-
-    if(isset($_POST["submit"])) {
-
-        $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bid')")
-        or die(mysqli_error($db));
-    }
-    else{
-        echo "Please add a comment";
-    }
-
     ?>
 <!DOCTYPE html>
 <html lang="en">
