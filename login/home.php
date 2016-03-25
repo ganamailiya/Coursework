@@ -32,13 +32,12 @@ $username= $_SESSION['username'];
 <br><br>
 <div class="link">
 <h1 id="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
-	<img src="../images/white.jpg" style{width="250" height="200"} class="icons">
-	<img src="../images/white1.jpg" style{width="250" height="200"} class="icons">
-	<a href="../BugInfo.php?bid=<?php echo $bid; ?>"> <input type = "button" value = "REPORT A BUG" > </a> &nbsp;&nbsp;
-	<a href="../buglist.php"> <input type = "button" value = "BUG LIST" ></a> &nbsp;&nbsp;
+	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">  <img src="../images/white.jpg" style{width="250" height="200"} class="icons"> </a>
+	<a href="../buglist.php"> 	<img src="../images/white1.jpg" style{width="250" height="200"} class="icons"> </a>
 </div>
 <br><br><br>
 <footer id = "footer">
-Designed By Iliya Ganama 2016 </footer>
+Designed By Iliya Ganama 2016
+</footer>
 </body>
 </html>
