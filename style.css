@@ -76,6 +76,9 @@ body{
 }
 #hello{
     font-family: Verdana;
-    font-size: larger;
+    font-size: 60%
     text-shadow: aqua;
+}
+.link{
+    border: 5px solid aqua;
 }

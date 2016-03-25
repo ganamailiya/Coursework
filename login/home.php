@@ -30,8 +30,8 @@ $username= $_SESSION['username'];
 </div>
 <body>
 <br><br>
-<h1 id="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 <div class="link">
+<h1 id="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 	<img src="../images/white.jpg" style{width="250" height="200"} class="icons">
 	<img src="../images/white1.jpg" style{width="250" height="200"} class="icons">
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>"> <input type = "button" value = "REPORT A BUG" > </a> &nbsp;&nbsp;
