@@ -30,7 +30,7 @@ $intbid = intval($bid);
 
     if(isset($_POST["submit"])) {
 
-    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$intid', '$intbid')")
+    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate) VALUES ('$comment', now())")
     or die(mysqli_error($db));
     }
     else{
