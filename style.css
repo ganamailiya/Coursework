@@ -64,6 +64,6 @@ margin-left : 40%;
     border-color: black;
     padding: 5%;
 }
-#button{
-
+body{
+    background-image: url("images/background.jpg");
 }
