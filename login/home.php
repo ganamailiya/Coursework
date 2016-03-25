@@ -14,14 +14,20 @@ $username= $_SESSION['username'];
 	}
 ?>
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Home</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
+	<meta charset="UTF-8">
+	<title>Welcome</title>
+	<link type="text/css" rel="../stylesheet" href="style.css"/>
 </head>
-
+<body>
+<img class="img1" src="../images/%20logo.png ">
+<div class="links">
+	<a href="../index.html">Home Page</a> &nbsp;&nbsp;
+	<a href="../login.html">Login</a> &nbsp;&nbsp;
+	<a href="logout.php">Logout</a>
+</div>
 <body>
 <h1 class="hello">Hello, <em><?php echo $_SESSION ["username"];?>!</em></h1>
 <div class="link">
