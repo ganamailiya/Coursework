@@ -91,6 +91,7 @@ $intbid = intval($bid);
         $comment = $rows['comment'];
         $post = $rows['postDate'];
         $delink="<a href=\"delete.php?id=" . $id . "\">Delete</a>";
+        echo "<a href='delete.php?id=".$id ."'>Delete</a></br>";
 
         echo $post . '<br />' . $comment . '<br />' . $delink  . '<br />' .  '<hr width="700px" />';
     }
