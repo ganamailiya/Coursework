@@ -32,7 +32,8 @@ $username= $_SESSION['username'];
 <br><br>
 <h1 class="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 <div class="link">
-	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Report a Bug</a> &nbsp;&nbsp;
+
+	<a href="../BugInfo.php?bid=<?php echo $bid; ?>"> <input type = "button" value = "REPORT A BUG" > </a> &nbsp;&nbsp;
 	<a href="../buglist.php">BugList</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
