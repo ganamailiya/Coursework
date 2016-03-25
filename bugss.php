@@ -54,7 +54,7 @@ echo $comment;
     echo "<p>".$bugdesc."</p>";
     ?>
     <h3>Add Comment</h3>
-    <form method="POST" action="bugss.php">
+    <form method="GET" action="comment.php">
         <table cellpadding="10" align="center" id = "signup">
             <tbody>
             <tr>
