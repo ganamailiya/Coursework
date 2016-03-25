@@ -72,5 +72,10 @@ body{
     border: 5px solid black;
     box-shadow: 10px 5px 10px #3399CC;
     border-radius: 10px;
-    margin-right: 2%;
+    margin-right: 5%;
+}
+#hello{
+    font-family: Verdana;
+    font-size: larger;
+    text-shadow: aqua;
 }
