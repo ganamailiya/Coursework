@@ -71,6 +71,6 @@ body{
 .icons{
     border: 5px solid black;
     box-shadow: 10px 5px 10px #3399CC;
-    padding: 20px;
     border-radius: 10px;
+    margin-left: 2%;
 }
