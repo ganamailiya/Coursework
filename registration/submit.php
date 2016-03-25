@@ -3,6 +3,7 @@ include ("connection.php");
 $msg = "";
 
 if(isset($_POST["submit"])) {
+    // Validation of fields
     if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["mobile"])) {
         $error = "All fields are required.";
     } else {
@@ -49,6 +50,6 @@ if(isset($_POST["submit"])) {
     <a href="../login.html">Login</a> &nbsp;&nbsp;
     <a href="../Signup.html">Signup</a>
 </div>
-<p><? echo $msg; ?></p>
+<br><br><br><p><? echo $msg; ?></p>
 </body>
 </html>
