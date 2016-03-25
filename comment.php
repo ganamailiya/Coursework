@@ -5,11 +5,10 @@
  * Date: 25/03/2016
  * Time: 1:44 AM
  */
-?>
-<?php
+
 session_start();
 // est DB connect
-include ("connection.php");
+include ("buglist.php");
 
 $sql = "select * from bugs WHERE bugID = ".$_GET["id"];
 
