@@ -34,10 +34,11 @@ $username= $_SESSION['username'];
 <h1 id="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">  <img src="../images/white.jpg" style{width="250" height="200"} class="icons"> </a>
 	<a href="../buglist.php"> 	<img src="../images/white1.jpg" style{width="250" height="200"} class="icons"> </a>
+	<footer id = "footer">
+		Designed By Iliya Ganama 2016
+	</footer>
 </div>
 <br><br><br>
-<footer id = "footer">
-Designed By Iliya Ganama 2016
-</footer>
+
 </body>
 </html>
