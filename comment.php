@@ -34,7 +34,7 @@ $intbid = intval($bid);
     or die(mysqli_error($db));
     }
     else{
-    echo "Please add a comment";
+    //echo "Please add a comment";
  }
 
 ?>
