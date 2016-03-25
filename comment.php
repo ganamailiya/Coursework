@@ -8,7 +8,7 @@
 
 session_start();
 // est DB connect
-include ("buglist.php");
+include ("connection.php");
 
 $sql = "select * from bugs WHERE bugID = ".$_GET["id"];
 
