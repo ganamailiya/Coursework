@@ -6,7 +6,6 @@
  * Time: 9:32 PM
  */
 session_start();
-$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +21,7 @@ $username = $_SESSION['username'];
     <div class="links">
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
     <a href="login.html">Login</a> &nbsp;&nbsp;
-    <a href="signup.html">Signup</a>
+    <a href="Signup.html">Signup</a>
     </div>
 <br><br><br>
 <h1>Bug List</h1>

@@ -17,12 +17,6 @@
     //echo $userID;
    // echo $bugID;
 
-    $sql1 = "select * from attachments WHERE bugID = ".$_GET["id"];
-
-    $result1 = mysqli_query($db,$sql1);
-    $row1 = mysqli_fetch_assoc($result);
-    $url = $row1['URL'];
-
     ?>
     <!DOCTYPE html>
     <html lang="en">
