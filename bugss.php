@@ -20,13 +20,12 @@
     $comment = $_POST["comment"];
     $username = $_SESSION['username'];
     $bid = $bugID;
-    $submit = $_POST["submit"];
+
 echo $comment;
     echo $username;
 
     if(isset($_POST["submit"])) {
 
-    if ($submit){
         $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bid')")
         or die(mysqli_error($db));
     }
@@ -34,7 +33,6 @@ echo $comment;
         echo "Please add a comment";
     }
 
-    }
     ?>
 <!DOCTYPE html>
 <html lang="en">
