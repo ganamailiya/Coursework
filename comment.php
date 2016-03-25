@@ -83,6 +83,23 @@ $intbid = intval($bid);
             </tbody>
         </table>
     </form>
+    <?php
+    $getquery = mysqli_query($db, "Select * from comments ORDER BY commentID DESC");
+    while ($rows = mysqli_fetch_assoc('$getquery'))
+    {
+        $id = $rows['commentID'];
+        $comment = $rows['comment'];
+        $post = $rows['postDate'];
+
+        echo $post . '<br />' . $comment . '<br />' . '<br />';
+    }
+
+    ?>
+
+
+
+
+
 </nav>
 <footer>
     <p>(c) 2016 Ganama's Design</p>
