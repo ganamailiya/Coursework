@@ -38,6 +38,6 @@ $username= $_SESSION['username'];
 	<a href="../buglist.php"> <input type = "button" value = "BUG LIST" ></a> &nbsp;&nbsp;
 </div>
 <br><br><br>
-
+<footer> </footer>
 </body>
 </html>
