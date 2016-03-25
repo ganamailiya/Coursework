@@ -26,7 +26,7 @@ $bugid = $_GET['bid'];
     <a href="login/logout.php">Logout</a> &nbsp;&nbsp;
 </div>
 <nav class = "format">
-    <h3><?php echo "Welcome" . " " .  $_SESSION["username"]; ?></h3>
+    <h3><?php echo "Hello" . " " .  $_SESSION["username"]; ?></h3>
     <h3>Report Bug</h3>
     <form method="POST" action="Bug.php" enctype="multipart/form-data">
         <input type="hidden" name="bug" value="<?php echo $username; ?>" >

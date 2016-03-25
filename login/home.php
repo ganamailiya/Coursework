@@ -19,7 +19,7 @@ $username= $_SESSION['username'];
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome</title>
-	<link type="text/css" rel="../stylesheet" href="style.css"/>
+	<link type="text/css" rel="stylesheet" href="../style.css"/>
 </head>
 <body>
 <img class="img1" src="../images/%20logo.png ">
@@ -29,9 +29,9 @@ $username= $_SESSION['username'];
 	<a href="logout.php">Logout</a>
 </div>
 <body>
-<h1 class="hello">Hello, <em><?php echo $_SESSION ["username"];?>!</em></h1>
+<h1 class="hello">Welcome, <em><?php echo $_SESSION ["username"];?>!</em></h1>
 <div class="link">
-	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Upload Bugs</a> &nbsp;&nbsp;
+	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Report a Bug</a> &nbsp;&nbsp;
 	<a href="../buglist.php">BugList</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
