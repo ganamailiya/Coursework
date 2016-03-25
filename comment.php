@@ -85,7 +85,7 @@ $intbid = intval($bid);
     </form>
     <?php
     $getquery = mysqli_query($db, "Select * from comments ORDER BY commentID DESC");
-    while ($rows = mysqli_fetch_assoc('$getquery'))
+    while ($rows = mysqli_fetch_assoc($getquery))
     {
         $id = $rows['commentID'];
         $comment = $rows['comment'];
