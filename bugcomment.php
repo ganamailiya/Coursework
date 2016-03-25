@@ -26,6 +26,7 @@ include ("login/login.php")
 </div>
 <br><br><br>
 <h1>Bug List</h1>
+<p>Kindly Click on the bug you wish to comment on..</p>
 <div id="content">
     <?php
     //Establish DB connect

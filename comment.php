@@ -31,12 +31,12 @@ $result = mysqli_query($db,$sql);
 
 $row = mysqli_fetch_assoc($result);
 
-echo $bugtitle = $row['title']; echo "<br>";
-echo $bid = $row['bugID']; echo "<br>";
+ $bugtitle = $row['title'];
+ $bid = $row['bugID'];
  $bugdesc = $row['description'];
-echo $uid = $row['userID']; echo "<br>";
+ $uid = $row['userID'];
 
-echo $comment = $_POST["comment"]; echo "<br>";
+ $comment = $_POST["comment"];
 
 
 /*echo $uid;
