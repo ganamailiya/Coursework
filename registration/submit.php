@@ -3,35 +3,35 @@ include ("connection.php");
 $msg = "";
 
 if(isset($_POST["submit"])) {
+    if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["mobile"])) {
+        $error = "All fields are required.";
+    } else {
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $mobile = $_POST["mobile"];
-    $name = mysqli_real_escape_string($db, $name);
-    $email = mysqli_real_escape_string($db, $email);
-    $password = mysqli_real_escape_string($db, $password);
-    $password = md5($password);
-    $mobile = mysqli_real_escape_string($db, $mobile);
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+        $mobile = $_POST["mobile"];
+        $name = mysqli_real_escape_string($db, $name);
+        $email = mysqli_real_escape_string($db, $email);
+        $password = mysqli_real_escape_string($db, $password);
+        $password = md5($password);
+        $mobile = mysqli_real_escape_string($db, $mobile);
 
 
-    $sql="SELECT email FROM users WHERE email='$email'";
-    $result=mysqli_query($db,$sql);
-    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-    if(mysqli_num_rows($result) == 1)
-    {
-        $msg = "Sorry...This email already exists...";
-    }
-    else
-    {
-        //echo $name." ".$email." ".$password;
-        $query = mysqli_query($db, "INSERT INTO users (username, email, password, phone)VALUES ('$name', '$email', '$password', '$mobile')")
-        or die(mysqli_error($db));
-        if($query)
-        {
-            $msg = "Thank You! you are now registered. Kindly click on the Login link";
+        $sql = "SELECT email FROM users WHERE email='$email'";
+        $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        if (mysqli_num_rows($result) == 1) {
+            $msg = "Sorry...This email already exists...";
+        } else {
+            //echo $name." ".$email." ".$password;
+            $query = mysqli_query($db, "INSERT INTO users (username, email, password, phone)VALUES ('$name', '$email', '$password', '$mobile')")
+            or die(mysqli_error($db));
+            if ($query) {
+                $msg = "Thank You! you are now registered. Kindly click on the Login link";
+            }
+
         }
-
     }
 }
 ?>
