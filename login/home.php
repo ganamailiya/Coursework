@@ -33,7 +33,7 @@ $username= $_SESSION['username'];
 <h1 class="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 <div class="link">
 	<img src="../images/white.jpg" style{width="250" height="200"}>
-	<img src="../images/white2.jpg" style{width="250" height="200"}>
+	<img src="../images/white1.jpg" style{width="250" height="200"}>
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>"> <input type = "button" value = "REPORT A BUG" > </a> &nbsp;&nbsp;
 	<a href="../buglist.php"> <input type = "button" value = "BUG LIST" ></a> &nbsp;&nbsp;
 </div>
