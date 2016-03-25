@@ -16,15 +16,15 @@ $result = mysqli_query($db,$sql);
 
 $row = mysqli_fetch_assoc($result);
 
-$bugtitle = $row['title'];
-$bugID = $row['bugID'];
-$bugdesc = $row['description'];
-$userID = $row['userID'];
+echo $bugtitle = $row['title']; echo "<br>";
+echo $bugID = $row['bugID']; echo "<br>";
+echo $bugdesc = $row['description']; echo "<br>";
+echo $userID = $row['userID']; echo "<br>";
 
-$comment = $_POST["comment"];
+echo $comment = $_POST["comment"]; echo "<br>";
 
 
-echo $userID;
+/*echo $userID;
 echo $bugID;
 echo $comment;
 $intid = intval($userID);
@@ -37,7 +37,7 @@ $intbid = intval($bugID);
     }
     else{
     echo "Please add a comment";
- }
+ }*/
 
 ?>
 <!DOCTYPE html>
