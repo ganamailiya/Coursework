@@ -25,7 +25,7 @@ $username= $_SESSION['username'];
 <img class="img1" src="../images/%20logo.png ">
 <div class="links">
 	<a href="../index.html">Home</a> &nbsp;&nbsp;
-	<a href="logout.php">Logout</a> &nbsp;&nbsp;
+	<a href="logout.php">Logout</a>;
 
 </div>
 <body>

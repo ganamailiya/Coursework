@@ -32,6 +32,7 @@
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
     <a href="login/logout.php">Logout</a> &nbsp;&nbsp;
 </div>
+<br><br><br>
 <nav class = "format">
     <?php
     echo "<h2>".$bugtitle."</h2>";

@@ -50,6 +50,7 @@ if(isset($_POST["submit"])) {
     <a href="../login.html">Login</a> &nbsp;&nbsp;
     <a href="../Signup.html">Signup</a>
 </div>
+<br><br><br>
 <p><? echo $msg; ?></p>
 </body>
 </html>

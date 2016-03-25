@@ -24,7 +24,7 @@ $username = $_SESSION['username'];
     <a href="login.html">Login</a> &nbsp;&nbsp;
     <a href="signup.html">Signup</a>
     </div>
-
+<br><br><br>
 <h1>Bug List</h1>
 <div id="content">
     <?php
