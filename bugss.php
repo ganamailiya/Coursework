@@ -19,8 +19,10 @@
 
     $comment = $_POST["comment"];
     $username = $_SESSION['username'];
-    $bid = $_GET["id"];
+    $bid = $bugID;
     $submit = $_POST["submit"];
+echo $comment;
+    echo $username;
 
     if(isset($_POST["submit"])) {
 
