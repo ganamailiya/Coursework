@@ -61,7 +61,8 @@ if(isset($_POST["submit"])) {
     $query1 = mysqli_query($db, "insert into attachments (URL, userID, bugID) VALUES ('$content', '$xid', '$newbugid')");
 
     if($query1) {
-        echo "<br/>Image Uploaded.";
+        $txt = "Image Uploaded.";
+        echo "<br/> $txt";
     }
     else
     {
