@@ -21,7 +21,6 @@ $bugID = $row['bugID'];
 $bugdesc = $row['description'];
 $userID = $row['userID'];
 
-
 $comment = $_POST["comment"];
 
 
@@ -29,14 +28,15 @@ echo $userID;
 echo $bugID;
 echo $comment;
 
-/**if(isset($_POST["submit"])) {
+
+    if(isset($_POST["submit"])) {
 
     $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bugID')")
     or die(mysqli_error($db));
     }
     else{
     echo "Please add a comment";
-**/}
+ }
 
 ?>
 <!DOCTYPE html>
