@@ -29,7 +29,7 @@ $username= $_SESSION['username'];
 	<a href="logout.php">Logout</a>
 </div>
 <body>
-<h1 class="hello">Welcome, <em><?php echo $_SESSION ["username"];?>!</em></h1>
+<h1 class="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 <div class="link">
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Report a Bug</a> &nbsp;&nbsp;
 	<a href="../buglist.php">BugList</a> &nbsp;&nbsp;
