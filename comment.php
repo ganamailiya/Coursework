@@ -24,15 +24,15 @@ echo $userID;
 // echo $bugID;
 
 $comment = $_POST["comment"];
-$username = $_SESSION['username'];
-$bid = $bugID;
 
+
+echo $userID;
+echo $bugID;
 echo $comment;
-echo $username;
 
 if(isset($_POST["submit"])) {
 
-    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bid')")
+    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bugID')")
     or die(mysqli_error($db));
 }
 else{
