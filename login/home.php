@@ -25,11 +25,11 @@ $username= $_SESSION['username'];
 <img class="img1" src="../images/%20logo.png ">
 <div class="links">
 	<a href="../index.html">Home</a> &nbsp;&nbsp;
-	<a href="logout.php">Logout</a>;
+	<a href="logout.php">Logout</a>
 
 </div>
 <body>
-<br><br><br>
+<br><br>
 <h1 class="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 <div class="link">
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Report a Bug</a> &nbsp;&nbsp;

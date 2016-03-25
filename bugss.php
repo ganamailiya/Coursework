@@ -35,7 +35,7 @@
 <br><br><br>
 <nav class = "format">
     <?php
-    echo "<h2>".$bugtitle."</h2>";
+    echo "<h2>" . "Bug Title: " .$bugtitle."</h2>";
     echo "<p>".$bugdesc."</p>";
     ?>
     <h3>Add Comment</h3>
