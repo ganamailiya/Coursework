@@ -31,7 +31,7 @@ echo $comment;
 
 if(isset($_POST["submit"])) {
 
-    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, bugID) VALUES ('$comment', now(), '$bugID')")
+    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate) VALUES ('$comment', now())")
     or die(mysqli_error($db));
 }
 else{
