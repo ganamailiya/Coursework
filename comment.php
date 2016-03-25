@@ -91,7 +91,7 @@ $intbid = intval($bid);
         $comment = $rows['comment'];
         $post = $rows['postDate'];
 
-        echo $post . '<br />' . $comment . '<br />' . '<br />';
+        echo $post . '<br />' . $comment . '<br />' . '<br />' .  '<hr width="1000px" />';
     }
 
     ?>
