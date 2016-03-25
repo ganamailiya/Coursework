@@ -18,12 +18,12 @@ include ("connection.php");
                     }
                     $bid +=10;
 
-                    $newuserid = "SELECT max(userID) FROM bugs";
+                   /* $newuserid = "SELECT max(userID) FROM bugs";
                     $d = mysqli_query ($db, $newuserid);
                     while($row = $d -> fetch_array()){
                      $uid = $row['0'];
                     }
-                    $uid +=10;
+                    $uid +=10;*/
 
 $sql = "select * from bugs WHERE bugID = ".$_GET["id"];
 
