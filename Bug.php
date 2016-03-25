@@ -62,7 +62,7 @@ if(isset($_POST["submit"])) {
 
     if($query1) {
         $txt = "Image Uploaded.";
-        echo "<br/> ";
+        echo "<br/> $txt";
     }
     else
     {

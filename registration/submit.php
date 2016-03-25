@@ -1,5 +1,8 @@
 <?php
 include ("connection.php");
+{
+    header('Location: ../login.html');
+}
 $msg = "";
 
 if(isset($_POST["submit"])) {
