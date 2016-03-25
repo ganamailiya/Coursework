@@ -35,7 +35,7 @@ $bugid = $_GET['bid'];
             <tr>
                 <td>Bug Tiltle</td>
                 <td>
-                    <input type="text" maxlength="10" name="bugtitle" required>
+                    <input type="text" name="bugtitle" required>
                 </td>
             </tr>
             <tr>
