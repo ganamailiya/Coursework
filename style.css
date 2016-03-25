@@ -78,11 +78,11 @@ body{
 #hello{
     font-family: Verdana;
     font-size: 50px;
-    text-shadow: aqua;
+    text-shadow: #3399CC;
     margin-left: 50px;
 }
 .link{
-    border: 5px solid aqua;
+    border: 5px solid #3399CC;
     padding: 20px;
     margin-left: 20%;
     margin-right: 28%;
