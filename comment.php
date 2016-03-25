@@ -30,7 +30,7 @@ $bid = $bugID;
 echo $comment;
 echo $username;
 
-if(isset($_POST["submit"])) {
+if(isset($_GET["submit"])) {
 
     $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bid')")
     or die(mysqli_error($db));

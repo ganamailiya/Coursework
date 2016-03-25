@@ -14,7 +14,7 @@
     $bugID = $row['bugID'];
     $bugdesc = $row['description'];
     $userID = $row['userID'];
-    echo $userID;
+    //echo $userID;
    // echo $bugID;
 
     ?>
