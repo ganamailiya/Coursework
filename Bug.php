@@ -60,7 +60,7 @@ if(isset($_POST["submit"])) {
 
     if($query1) {
         $txt = "Image Uploaded.";
-        echo "<br/> $txt";
+       // echo "<br/> $txt";
     }
     else
     {
@@ -72,7 +72,7 @@ if(isset($_POST["submit"])) {
     if($query)
     {
         $msg = "Bug successfully submitted..";
-       // echo "<br>$msg<br>";
+        echo "<br>$msg<br>";
     }
     else
     {
