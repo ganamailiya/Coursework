@@ -24,17 +24,18 @@ $username= $_SESSION['username'];
 <body>
 <img class="img1" src="../images/%20logo.png ">
 <div class="links">
-	<a href="../index.html">Home Page</a> &nbsp;&nbsp;
-	<a href="../login.html">Login</a> &nbsp;&nbsp;
-	<a href="logout.php">Logout</a>
+	<a href="../index.html">Home</a> &nbsp;&nbsp;
+	<a href="logout.php">Logout</a> &nbsp;&nbsp;
+
 </div>
 <body>
+<br><br><br>
 <h1 class="hello">Welcome <?php echo $_SESSION ["username"];?>!</h1>
 <div class="link">
 	<a href="../BugInfo.php?bid=<?php echo $bid; ?>">Report a Bug</a> &nbsp;&nbsp;
 	<a href="../buglist.php">BugList</a> &nbsp;&nbsp;
 </div>
 <br><br><br>
-<a href="logout.php" style="font-size:18px">Logout?</a>
+
 </body>
 </html>
