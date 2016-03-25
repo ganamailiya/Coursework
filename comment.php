@@ -11,19 +11,19 @@ session_start();
 include ("connection.php");
 
 
-                    $newbugid = "SELECT max(bugID) FROM bugs";
-                    $r = mysqli_query ($db, $newbugid);
-                    while($row = $r -> fetch_array()){
-                        $bid = $row['0'];
-                    }
-                    $bid +=10;
+/*  $newbugid = "SELECT max(bugID) FROM bugs";
+  $r = mysqli_query ($db, $newbugid);
+  while($row = $r -> fetch_array()){
+      $bid = $row['0'];
+  }
+  $bid +=10;
 
-                   /* $newuserid = "SELECT max(userID) FROM bugs";
-                    $d = mysqli_query ($db, $newuserid);
-                    while($row = $d -> fetch_array()){
-                     $uid = $row['0'];
-                    }
-                    $uid +=10;*/
+  $newuserid = "SELECT max(userID) FROM bugs";
+  $d = mysqli_query ($db, $newuserid);
+  while($row = $d -> fetch_array()){
+   $uid = $row['0'];
+  }
+  $uid +=10;*/
 
 $sql = "select * from bugs WHERE bugID = ".$_GET["id"];
 
@@ -32,9 +32,9 @@ $result = mysqli_query($db,$sql);
 $row = mysqli_fetch_assoc($result);
 
 echo $bugtitle = $row['title']; echo "<br>";
-echo $bid = $row['bid']; echo "<br>";
-echo $bugdesc = $row['description']; echo "<br>";
-echo $uid = $row['uid']; echo "<br>";
+echo $bid = $row['bugID']; echo "<br>";
+ $bugdesc = $row['description'];
+echo $uid = $row['userID']; echo "<br>";
 
 echo $comment = $_POST["comment"]; echo "<br>";
 
