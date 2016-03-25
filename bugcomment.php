@@ -5,7 +5,8 @@
  * Date: 25/03/2016
  * Time: 1:22 PM
  */
-
+SESSION_START();
+include ("login/login.php")
 ?>
 
 <!DOCTYPE html>
@@ -21,23 +22,23 @@
 <div class="links">
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
     <a href="login.html">Login</a> &nbsp;&nbsp;
-    <a href="signup.html">Signup</a>
+    <a href="Signup.html">Signup</a>
 </div>
 <br><br><br>
 <h1>Bug List</h1>
 <div id="content">
     <?php
-    //Establish connection with DB
+    //Establish DB connect
     include ("connection.php");
     $_POST["bugID"];
 
-    //select all from bugs table
+
     $sql = "select * from bugs";
 
-    //fetch result from DB
+    //fetch result from sql query of DB
     $result = mysqli_query($db,$sql);
 
-    //we scan each row
+    //we scanning through each row
     while($row = mysqli_fetch_assoc($result)){
         //get bug title and id
         $bugtitle = $row['title'];

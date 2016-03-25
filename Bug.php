@@ -30,7 +30,6 @@ if(isset($_POST["submit"])) {
         $Bugtitle = $_POST["bugtitle"];
         $BugDesc = $_POST["bugdescription"];
         $PresentUser = $_POST['bug'];
-        echo $PresentUser;
 
         $Bugtitle = mysqli_real_escape_string($db, $Bugtitle);
         $BugDesc = mysqli_real_escape_string($db, $BugDesc);
@@ -43,8 +42,7 @@ if(isset($_POST["submit"])) {
         $xname = $rows['username'];
         $xid = $rows['userID'];
 
-        //echo "The username selected is = $xname<br>";
-        //echo "The userID is = $xid<br>";
+
     }
 
 
