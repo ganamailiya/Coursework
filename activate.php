@@ -20,7 +20,7 @@ session_start();
 
     <br><br>
     <section>
-        <h3>Bugs & Jobs Tracking System(BJTS)</h3>
+        <h3>Found Bugs</h3>
         <p></p>
         <form method="post" action="activate.php">
             <fieldset>
@@ -57,6 +57,7 @@ session_start();
                 <p></p>
                 <input type="submit" name="submit" value="submit">
                 <?php
+                /*
 
                 if(isset($_POST['submit'])){//to run PHP script on submit
                     if(!empty($_POST['uid'])){
@@ -70,14 +71,15 @@ session_start();
 
                             } else{
                                 echo "ERROR: Could not be able to execute"/**$qry. mysqli_error($db)*/;
-                            }
+                           // }
 
                             // Close connection
                             // mysqli_close($db);
-                        }
-                        echo "Update was successful";
-                    }else{echo "Select a User To Activate";}
-                }
+                       // }
+                    //    echo "Update was successful";
+                  //  }else{echo "Select a User To Activate";}
+             //   }
+
                 ?>
             </fieldset>
 
