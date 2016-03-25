@@ -20,8 +20,8 @@
     $sql1 = "select * from attachments WHERE bugID = ".$_GET["id"];
 
     $result1 = mysqli_query($db,$sql1);
-    $row = mysqli_fetch_assoc($result);
-    $url = $row['URL'];
+    $row1 = mysqli_fetch_assoc($result);
+    $url = $row1['URL'];
     echo $url;
 
     ?>
@@ -39,6 +39,7 @@
     <a href="login/home.php">Home Page</a> &nbsp;&nbsp;
     <a href="login/logout.php">Logout</a> &nbsp;&nbsp;
 </div>
+<img src="<?php echo $row1['URL'];?>" height="100" width="100" />
 <br><br><br>
 <nav class = "format">
     <?php
