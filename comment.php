@@ -28,7 +28,6 @@ echo $userID;
 echo $bugID;
 echo $comment;
 
-
     if(isset($_POST["submit"])) {
 
     $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$userID', '$bugID')")
