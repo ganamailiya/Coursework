@@ -43,7 +43,7 @@
 <nav class = "format">
     <?php
     echo "<h2>" . "Bug Title: " .$bugtitle."</h2>";
-    echo "<p>".$bugdesc."</p>";
+    echo "<p>" . "Bug Description: " .$bugdesc."</p>";
     ?>
     <h3>Add Comment</h3>
     <form method="GET" action="comment.php">
