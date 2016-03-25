@@ -11,20 +11,6 @@ session_start();
 include ("connection.php");
 
 
-/*  $newbugid = "SELECT max(bugID) FROM bugs";
-  $r = mysqli_query ($db, $newbugid);
-  while($row = $r -> fetch_array()){
-      $bid = $row['0'];
-  }
-  $bid +=10;
-
-  $newuserid = "SELECT max(userID) FROM bugs";
-  $d = mysqli_query ($db, $newuserid);
-  while($row = $d -> fetch_array()){
-   $uid = $row['0'];
-  }
-  $uid +=10;*/
-
 $sql = "select * from bugs WHERE bugID = ".$_GET["id"];
 
 $result = mysqli_query($db,$sql);
@@ -39,20 +25,17 @@ $row = mysqli_fetch_assoc($result);
  $comment = $_POST["comment"];
 
 
-/*echo $uid;
-echo $bid;
-echo $comment;
-$intid = intval($userID);
-$intbid = intval($bugID);
+$intid = intval($uid);
+$intbid = intval($bid);
 
     if(isset($_POST["submit"])) {
 
-    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$uid', '$bid')")
+    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$intid', '$intbid')")
     or die(mysqli_error($db));
     }
     else{
     echo "Please add a comment";
- }*/
+ }
 
 ?>
 <!DOCTYPE html>
