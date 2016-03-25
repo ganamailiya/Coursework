@@ -28,11 +28,11 @@ echo $userID;
 echo $bugID;
 echo $comment;
 $intid = intval($userID);
-
+$intbid = intval($bugID);
 
     if(isset($_POST["submit"])) {
 
-    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$intid', $bugID)")
+    $query = mysqli_query($db, "INSERT INTO comments (comment, postDate, userID, bugID) VALUES ('$comment', now(), '$intid', '$intbid')")
     or die(mysqli_error($db));
     }
     else{
