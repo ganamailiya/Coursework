@@ -23,15 +23,18 @@ if(isset($_POST["submit"])) {
         fclose($fp);
         move_uploaded_file($dir, $location.$file_name);
         }
+// Validation of fields
+    if (empty($_POST["bugtitle"]) || empty($_POST["bugdescription"])) {
+        $error = "All fields are required.";
+    } else {
+        $Bugtitle = $_POST["bugtitle"];
+        $BugDesc = $_POST["bugdescription"];
+        $PresentUser = $_POST['bug'];
+        echo $PresentUser;
 
-    $Bugtitle = $_POST["bugtitle"];
-    $BugDesc = $_POST["bugdescription"];
-    $PresentUser = $_POST['bug'] ;
-echo $PresentUser;
-
-    $Bugtitle= mysqli_real_escape_string($db, $Bugtitle);
-    $BugDesc = mysqli_real_escape_string($db, $BugDesc);
-
+        $Bugtitle = mysqli_real_escape_string($db, $Bugtitle);
+        $BugDesc = mysqli_real_escape_string($db, $BugDesc);
+    }
 
 
     $query2 = mysqli_query($db, "SELECT * FROM users WHERE username = '$PresentUser'") or die (mysqli_error($db));

@@ -14,6 +14,8 @@
     $bugID = $row['bugID'];
     $bugdesc = $row['description'];
     $userID = $row['userID'];
+    echo $userID;
+    echo $bugID;
 
     $comment = $_POST["comment"];
     $username = $_SESSION['username'];
