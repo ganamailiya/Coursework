@@ -90,9 +90,9 @@ $intbid = intval($bid);
         $id = $rows['commentID'];
         $comment = $rows['comment'];
         $post = $rows['postDate'];
-        $delink="<a href=\"delete.php?id=" . $id . "\"></a>";
+        $delink="<a href=\"delete.php?id=" . $id . "\">Delete</a>";
 
-        echo $post . '<br />' . $comment . '<br />' . $delink  . '<br />' .  '<hr width="900px" />';
+        echo "Date Posted: " .  $post . '<br />' . $comment . '<br />' . $delink  . '<br />' .  '<hr width="1000px" />';
     }
 
     ?>
