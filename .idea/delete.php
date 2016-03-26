@@ -7,6 +7,6 @@
  */
 include ("connection.php");
 $deleteid = $_GET['id'];
-$query = mysqli_query($db, "delete from comments where commentID='Sdeleteid'");
+$query =  "delete from comments where commentID= ".$_GET["id"];
 header("location: comment.php");
 ?>
